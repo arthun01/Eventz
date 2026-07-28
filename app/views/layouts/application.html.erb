@@ -23,26 +23,12 @@
   </head>
 
   <body>
-    <header>
-      <nav>
-        <%= link_to image_tag("logo.png"), root_path %>
-        <ul>
-          <li>
-            <%# <a href="/events">All Events</a> %>
-            <%= link_to "All Events", events_path %>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <%= render "layouts/header" %>
 
     <div class="content">
       <%= yield %>
     </div>
 
-    <footer>
-      <p>
-        Made by <a href="https://arthurrv.dev" target="_blank">arthurrv</a>
-      </p>
-    </footer>
+    <%= render "layouts/footer" %>
   </body>
 </html>
