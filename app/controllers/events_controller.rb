@@ -1,8 +1,8 @@
 class EventsController < ApplicationController
 
     def index
-        @arthur_age = rand(60)
-        @events = Event.all
+        # @events = Event.all
+        @events = Event.upcoming
     end
 
     def show
@@ -11,7 +11,6 @@ class EventsController < ApplicationController
 
     def edit
         @event = Event.find(params[:id])
-
     end
 
     def update
@@ -40,6 +39,6 @@ class EventsController < ApplicationController
 
     def event_params
         params.require(:event).
-            permit(:name, :description, :location, :price, :starts_at)
+            permit(:name, :description, :location, :price, :starts_at, :capacity, :image_file_name)
     end
 end
