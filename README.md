@@ -4,6 +4,44 @@
 
 ---
 
+## 🚀 Como Rodar o Projeto
+
+Siga os passos abaixo para clonar e rodar o projeto na sua máquina local:
+
+### 1. Clonar o repositório
+```bash
+git clone https://github.com/arthun01/Eventz
+cd eventz
+```
+
+### 2. Instalar as dependências
+Certifique-se de ter o Ruby e o Node.js/Yarn instalados. Em seguida, instale as gems e pacotes:
+```bash
+bundle install
+yarn install
+```
+
+### 3. Configurar o Banco de Dados
+Crie o banco de dados, carregue o schema e popule com dados iniciais (se houver):
+```bash
+bin/rails db:setup
+```
+
+Caso já tenha configurado o banco e queira apenas rodar o seed para povoá-lo com dados de exemplo, utilize:
+```bash
+bin/rails db:seed
+```
+
+### 4. Iniciar o Servidor
+Inicie o servidor de desenvolvimento (que cuida do Rails + compilação de assets/CSS):
+```bash
+bin/dev
+```
+
+Acesse a aplicação no navegador em: [http://localhost:3000](http://localhost:3000)
+
+---
+
 ## 📊 Progresso Geral
 
 
